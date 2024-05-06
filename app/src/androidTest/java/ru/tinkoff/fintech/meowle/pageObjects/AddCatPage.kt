@@ -1,6 +1,5 @@
 package ru.tinkoff.fintech.meowle.pageObjects
 
-import android.os.Build
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.action.ViewActions.replaceText
@@ -49,10 +48,8 @@ class AddCatPage: BasePage() {
     }
 
     fun checkSuccessMessage() {
-        if (Build.VERSION.SDK_INT <= 29) {
-            successMessage.inRoot(ToastMatcherAPI29())
-                .check(matches(isDisplayed()))
-        }
+        successMessage.inRoot(ToastMatcherAPI29())
+            .check(matches(isDisplayed()))
     }
 
     fun checkPhotoPickerIsOpen() {
