@@ -1,6 +1,8 @@
 [versions]
 
 androidGradlePlugin = "8.3.1"
+awaitility = "4.2.0"
+espressoIntents = "3.4.0"
 kotlin = "1.9.22"
 ktx = "1.12.0"
 appcompat = "1.6.1"
@@ -26,8 +28,11 @@ coil = "2.5.0"
 junit = "4.13.2"
 junitExt = "1.1.5"
 espresso = "3.5.1"
+junitKtx = "1.1.5"
+uiautomator = "2.3.0"
 
 [libraries]
+androidx-espresso-intents = { module = "androidx.test.espresso:espresso-intents", version.ref = "espressoIntents" }
 androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "materialVersion" }
@@ -74,6 +79,8 @@ coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coi
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 junit-ext = { group = "androidx.test.ext", name = "junit", version.ref = "junitExt" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
+androidx-uiautomator = { group = "androidx.test.uiautomator", name = "uiautomator", version.ref = "uiautomator" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
